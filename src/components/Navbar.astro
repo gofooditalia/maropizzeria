@@ -1,0 +1,81 @@
+---
+import { Menu, X } from "lucide-astro";
+import { site } from "../data/site";
+
+const links = [
+  { href: "/#home", label: "Home" },
+  { href: "/#storia", label: "Chi siamo" },
+  { href: "/#pizza-pollo", label: "Pizza & Pollo" },
+  ...(site.hasGallery ? [{ href: "/#gallery", label: "Gallery" }] : []),
+  { href: "/#contatti", label: "Dove siamo" },
+];
+---
+
+<header
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 px-6 lg:px-10 py-3 transition-all duration-500"
+>
+  <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+    <a href="/" class="flex items-center group" aria-label={site.name}>
+      <img src="/images/logo-sm.webp" alt={`${site.name} logo`} width="480" height="332" class="h-14 w-auto transition-transform group-hover:scale-105" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8">
+      {links.map((l) => (
+        <a href={l.href} class="text-brown text-sm font-semibold hover:text-primary transition-colors">{l.label}</a>
+      ))}
+      <a
+        href={site.menuUrl || "/#contatti"}
+        class="flex items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-black tracking-widest uppercase hover:bg-primary-dark transition-all shadow-lg shadow-primary/30 active:scale-95"
+      >
+        {site.menuUrl ? "Vedi menu" : "Dove siamo"}
+      </a>
+    </nav>
+
+    <button id="mobile-menu-button" class="lg:hidden p-2 text-brown" aria-label="Apri menu" aria-expanded="false">
+      <Menu class="size-7" />
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-cream z-50 flex-col items-center justify-center gap-8">
+    <button id="mobile-menu-close" class="absolute top-5 right-6 p-2 text-brown" aria-label="Chiudi menu">
+      <X class="size-8" />
+    </button>
+    <img src="/images/logo-sm.webp" alt="" class="h-24 w-auto mb-4" />
+    {links.map((l) => (
+      <a href={l.href} class="mobile-link text-brown text-2xl font-display hover:text-primary transition-colors">{l.label}</a>
+    ))}
+    {site.menuUrl && (
+      <a href={site.menuUrl} class="mobile-link mt-4 rounded-lg h-12 px-8 flex items-center bg-primary text-white font-black tracking-widest uppercase">
+        Vedi menu
+      </a>
+    )}
+  </div>
+</header>
+
+<script>
+  const navbar = document.getElementById("navbar");
+  const btn = document.getElementById("mobile-menu-button");
+  const closeBtn = document.getElementById("mobile-menu-close");
+  const menu = document.getElementById("mobile-menu");
+
+  const toggle = (open: boolean) => {
+    menu?.classList.toggle("hidden", !open);
+    menu?.classList.toggle("flex", open);
+    btn?.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+  };
+
+  btn?.addEventListener("click", () => toggle(true));
+  closeBtn?.addEventListener("click", () => toggle(false));
+  menu?.querySelectorAll(".mobile-link").forEach((a) => a.addEventListener("click", () => toggle(false)));
+
+  const onScroll = () => {
+    const scrolled = window.scrollY > 40;
+    navbar?.classList.toggle("bg-cream/90", scrolled);
+    navbar?.classList.toggle("backdrop-blur-md", scrolled);
+    navbar?.classList.toggle("shadow-md", scrolled);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+</script>

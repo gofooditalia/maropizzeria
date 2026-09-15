@@ -1,0 +1,41 @@
+---
+import { Flame, Drumstick, ShoppingBag } from "lucide-astro";
+import { site } from "../data/site";
+
+const facts = [
+  { icon: Flame, title: "Pizza dal forno", text: "Impasti curati e cottura tradizionale." },
+  { icon: Drumstick, title: "Pollo allo spiedo", text: "Cotto lentamente, croccante e succoso." },
+  { icon: ShoppingBag, title: "Al tavolo o da asporto", text: "Tutti i giorni, a pranzo e a cena." },
+];
+---
+
+<section id="storia" class="py-20 lg:py-28 px-6 bg-brown-dark text-white">
+  <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3">Chi siamo</p>
+      <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Pizza e pollo, fatti con il cuore</h2>
+      <p class="mt-6 text-lg text-white/75 leading-relaxed">
+        <!-- TODO: storia reale del nuovo gestore -->
+        {site.shortName} nasce in via Romagna con una nuova gestione e un locale completamente rinnovato: pizze dal forno e pollo allo spiedo, preparati ogni giorno con ingredienti selezionati.
+      </p>
+      <p class="mt-4 text-lg text-white/75 leading-relaxed">
+        Da mangiare qui o da portare a casa, per un pranzo o una cena semplice e genuina.
+      </p>
+    </div>
+
+    <!-- TODO: quando disponibili, sostituire con una foto del locale (public/images/about.jpg) -->
+    <ul class="grid gap-4">
+      {facts.map((f) => (
+        <li class="flex items-start gap-5 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <span class="size-12 shrink-0 rounded-xl bg-primary/20 text-accent flex items-center justify-center">
+            <f.icon class="size-6" />
+          </span>
+          <div>
+            <h3 class="text-xl font-bold">{f.title}</h3>
+            <p class="text-white/70 mt-1">{f.text}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

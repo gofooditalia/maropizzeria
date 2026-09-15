@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Palette estratta dal logo MaRo Pizza & Pollo */
+@theme {
+  --color-primary: #c60404;      /* rosso logo */
+  --color-primary-dark: #9a0303;
+  --color-brown: #3e1b09;        /* marrone logo */
+  --color-brown-dark: #1d0a01;
+  --color-basil: #03571a;        /* verde logo */
+  --color-accent: #e5b94c;       /* oro caldo (accento) */
+  --color-cream: #fbf6ee;
+  --color-neutral-text: #2b1a10;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans-main: "Inter Variable", system-ui, sans-serif;
+}
+
+:root {
+  background-color: var(--color-brown-dark);
+  color: var(--color-neutral-text);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-sans-main);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
