@@ -84,8 +84,11 @@ const links = [
 
   const onScroll = () => {
     const scrolled = window.scrollY > getThreshold();
-    navbar?.classList.toggle("bg-cream/90", scrolled);
-    navbar?.classList.toggle("backdrop-blur-md", scrolled);
+    navbar?.classList.toggle("bg-cream/50", scrolled);
+    navbar?.classList.toggle("backdrop-blur-lg", scrolled);
+    navbar?.classList.toggle("backdrop-saturate-150", scrolled);
+    navbar?.classList.toggle("border-b", scrolled);
+    navbar?.classList.toggle("border-white/30", scrolled);
     navbar?.classList.toggle("shadow-md", scrolled);
     navLinks?.forEach((el) => {
       el.classList.toggle("text-brown", scrolled);
