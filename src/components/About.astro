@@ -12,13 +12,15 @@ const facts = [
 <section id="storia" class="relative min-h-svh flex items-center py-20 lg:py-28 px-6 bg-brown-dark text-white overflow-hidden">
   <video
     class="absolute inset-0 size-full object-cover"
-    src="/video/maro_video_chisiamo.mp4"
     muted
     playsinline
     loop
     autoplay
     aria-hidden="true"
-  ></video>
+  >
+    <source src="/video/maro_video_chisiamo_mobile.mp4" media="(max-width: 767px)" />
+    <source src="/video/maro_video_chisiamo.mp4" />
+  </video>
   <div class="absolute inset-0 bg-brown-dark/80"></div>
 
   <div class="relative z-10 max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
