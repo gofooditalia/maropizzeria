@@ -9,6 +9,7 @@ const year = new Date().getFullYear();
       <p class="text-white font-display text-lg">{site.name}</p>
       <p>{site.address.street}, {site.address.zip} {site.address.city}</p>
       <p class="mt-1">© {year} {site.name}. Tutti i diritti riservati.</p>
+      <p class="mt-1 text-white/50 text-xs">{site.legal.companyName} - P.IVA e C.F. {site.legal.taxCode}</p>
     </div>
     <a href="https://gofoodmenu.it" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-white transition-colors">
       <span>Sviluppato da</span>

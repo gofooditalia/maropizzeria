@@ -1,6 +1,6 @@
 # MaRò Pizzeria
 
-Benvenuti su MaRò Pizzeria. Sito ufficiale del locale in via Romagna 8, Palermo. Dominio: maropizzeria.it
+Benvenuti su MaRò Pizzeria. Sito ufficiale del locale in via Romagna 6/8, Palermo. Dominio: maropizzeria.it
 
 ## 🛠️ Tech Stack
 

@@ -37,6 +37,9 @@ const jsonLd = {
       closes: "23:30",
     },
   ], // TODO: fasce orarie precise (solo cena, tutti i giorni)
+  legalName: site.legal.companyName,
+  vatID: site.legal.vatNumber,
+  taxID: site.legal.taxCode,
   ...(site.phone ? { telephone: site.phone } : {}),
 };
 ---
