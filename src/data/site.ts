@@ -36,7 +36,7 @@ export const offer = [
   {
     name: "Pizza",
     description:
-      "Impasto a lunga lievitazione e cottura in forno, con ingredienti selezionati. Dalle classiche alle proposte della casa.",
+      "Impasto a lievitazione naturale e cottura in forno, con ingredienti selezionati. Dalle classiche alle proposte della casa.",
   },
   {
     name: "Pollo allo spiedo",
