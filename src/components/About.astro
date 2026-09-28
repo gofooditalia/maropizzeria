@@ -1,9 +1,10 @@
 ---
-import { Flame, Drumstick, ShoppingBag } from "lucide-astro";
+import { Flame, Drumstick, ShoppingBag, Landmark } from "lucide-astro";
 import { site } from "../data/site";
 
 const facts = [
-  { icon: Flame, title: "Pizza dal forno", text: "Impasto a lunga lievitazione, cotto nel forno a legna." },
+  { icon: Landmark, title: "Storia palermitana", text: "Nella location della storica pizzeria Maniero." },
+  { icon: Flame, title: "Pizza dal forno", text: "Impasto a lunga lievitazione, curato ogni giorno." },
   { icon: Drumstick, title: "Pollo allo spiedo", text: "Cottura lenta: dorato e croccante fuori, morbido dentro." },
   { icon: ShoppingBag, title: "Al tavolo o da asporto", text: "Aperti tutti i giorni, solo a cena." },
 ];
@@ -26,13 +27,13 @@ const facts = [
   <div class="relative z-10 max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
     <div>
       <p class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3">Chi siamo</p>
-      <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Pizza e pollo, fatti con il cuore</h2>
+      <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Un'eredità palermitana che continua</h2>
       <p class="mt-6 text-lg text-white/75 leading-relaxed">
         <!-- TODO: verificare/perfezionare con il racconto reale del nuovo gestore -->
-        In via Romagna nasce {site.shortName}: una nuova gestione, un locale rinnovato da cima a fondo e la stessa idea di sempre, fare le cose per bene. La pizza esce da un impasto a lunga lievitazione e da un forno a legna sempre acceso; il pollo gira lento sullo spiedo fino a diventare dorato e croccante fuori, tenero dentro.
+        C'è un indirizzo che per un'intera generazione di palermitani ha un nome solo: Maniero. In via Romagna, dove per anni la storica pizzeria ha scritto la sua storia, nasce oggi {site.shortName}: erede di quella tradizione, con una nuova gestione e un locale rinnovato da cima a fondo, per scrivere un nuovo capitolo senza dimenticare da dove viene.
       </p>
       <p class="mt-4 text-lg text-white/75 leading-relaxed">
-        Un menu semplice da gustare al tavolo o portare a casa: aperti tutti i giorni, solo a cena.
+        Pizza con impasto a lunga lievitazione, curato ogni giorno, e pollo allo spiedo cotto lento fino a diventare dorato e croccante fuori, tenero dentro. Da gustare al tavolo o da portare a casa: aperti tutti i giorni, solo a cena.
       </p>
     </div>
 
