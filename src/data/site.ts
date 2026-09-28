@@ -3,11 +3,11 @@
  * I campi vuoti ("" o false) nascondono automaticamente le sezioni/pulsanti corrispondenti.
  */
 export const site = {
-  name: "MaRo Pizza & Pollo",
-  shortName: "MaRo",
-  tagline: "Pizza & Pollo a Palermo",
+  name: "MaRò Pizzeria",
+  shortName: "MaRò",
+  tagline: "Pizza e pollo allo spiedo a Palermo",
   description:
-    "MaRo Pizza & Pollo - Pizzeria e pollo allo spiedo in via Romagna 8 a Palermo. Aperti tutti i giorni a pranzo e cena. Apertura prevista fine ottobre 2026.",
+    "MaRò Pizzeria - Pizza e pollo allo spiedo in via Romagna 8 a Palermo. Aperti tutti i giorni a pranzo e cena. Apertura prevista fine ottobre 2026.",
   openingNotice: "Apertura prevista fine ottobre 2026",
   address: {
     street: "Via Romagna, 8",

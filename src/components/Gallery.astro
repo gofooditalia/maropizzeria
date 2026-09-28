@@ -1,8 +1,10 @@
 ---
+import { site } from "../data/site";
+
 // TODO: sostituire con le foto reali in public/images/gallery/
 const photos = Array.from({ length: 6 }, (_, i) => ({
   src: `/images/gallery/${i + 1}.jpg`,
-  alt: `MaRo Pizza & Pollo - foto ${i + 1}`,
+  alt: `${site.name} - foto ${i + 1}`,
 }));
 ---
 
