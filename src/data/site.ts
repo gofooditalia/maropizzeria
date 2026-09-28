@@ -18,7 +18,7 @@ export const site = {
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=38.145718,13.337559",
   },
   phone: "",            // TODO: numero del nuovo gestore
-  whatsapp: "",         // TODO: solo cifre con prefisso, es. 393281234567
+  whatsapp: "393791239870", // Numero prenotazioni WhatsApp
   email: "",            // TODO
   hours: [
     { days: "Tutti i giorni", time: "Cena" },

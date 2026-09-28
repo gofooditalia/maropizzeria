@@ -7,6 +7,7 @@ const links = [
   { href: "/#storia", label: "Chi siamo" },
   { href: "/#pizza-pollo", label: "Pizza & Pollo" },
   ...(site.hasGallery ? [{ href: "/#gallery", label: "Gallery" }] : []),
+  { href: "/#prenota", label: "Prenota" },
   { href: "/#contatti", label: "Dove siamo" },
 ];
 ---
@@ -25,10 +26,10 @@ const links = [
         <a href={l.href} class="nav-link text-brown text-sm font-semibold hover:text-primary transition-colors">{l.label}</a>
       ))}
       <a
-        href={site.menuUrl || "/#contatti"}
+        href={site.whatsapp ? "/#prenota" : (site.menuUrl || "/#contatti")}
         class="flex items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-black tracking-widest uppercase hover:bg-primary-dark transition-all shadow-lg shadow-primary/30 active:scale-95"
       >
-        {site.menuUrl ? "Vedi menu" : "Dove siamo"}
+        {site.whatsapp ? "Prenota" : (site.menuUrl ? "Vedi menu" : "Dove siamo")}
       </a>
     </nav>
 
@@ -45,7 +46,12 @@ const links = [
     {links.map((l) => (
       <a href={l.href} class="mobile-link text-brown text-2xl font-display hover:text-primary transition-colors">{l.label}</a>
     ))}
-    {site.menuUrl && (
+    {site.whatsapp && (
+      <a href="/#prenota" class="mobile-link mt-4 rounded-lg h-12 px-8 flex items-center bg-primary text-white font-black tracking-widest uppercase">
+        Prenota un tavolo
+      </a>
+    )}
+    {!site.whatsapp && site.menuUrl && (
       <a href={site.menuUrl} class="mobile-link mt-4 rounded-lg h-12 px-8 flex items-center bg-primary text-white font-black tracking-widest uppercase">
         Vedi menu
       </a>
