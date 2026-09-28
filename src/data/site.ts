@@ -10,12 +10,13 @@ export const site = {
     "MaRò Pizzeria - Pizza e pollo allo spiedo in via Romagna 8 a Palermo. Aperti tutti i giorni a pranzo e cena. Apertura prevista fine ottobre 2026.",
   openingNotice: "Apertura prevista fine ottobre 2026",
   address: {
-    street: "Via Romagna, 8",
+    street: "Via Romagna, 6810",
     city: "Palermo",
     zip: "90144",
-    lat: 38.145718,
-    lng: 13.337559,
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=38.145718,13.337559",
+    // Le coordinate precedenti (38.145718, 13.337559) erano quelle del vecchio
+    // gestore al civico 8 e non sono più valide per il civico 6810: il link e
+    // la mappa usano l'indirizzo testuale finché non avremo coordinate verificate.
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Via+Romagna+6810%2C+90144+Palermo",
   },
   phone: "",            // TODO: numero del nuovo gestore
   whatsapp: "",         // TODO: solo cifre con prefisso, es. 393281234567
