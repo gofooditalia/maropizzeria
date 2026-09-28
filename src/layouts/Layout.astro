@@ -28,7 +28,7 @@ const jsonLd = {
     addressRegion: "PA",
     addressCountry: "IT",
   },
-  // geo: TODO aggiungere coordinate verificate per il civico 6810 quando disponibili
+  geo: { "@type": "GeoCoordinates", latitude: site.address.lat, longitude: site.address.lng },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
