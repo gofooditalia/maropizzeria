@@ -7,7 +7,7 @@ export const site = {
   shortName: "MaRò",
   tagline: "Pizza e pollo allo spiedo a Palermo",
   description:
-    "MaRò Pizzeria - Pizza e pollo allo spiedo in via Romagna 8 a Palermo, nella storica location della pizzeria Maniero. Aperti tutti i giorni, solo a cena. Apertura prevista fine ottobre 2026.",
+    "MaRò Pizzeria - Pizza e pollo allo spiedo in via Romagna 8 a Palermo, nella storica location della pizzeria Il Maniero. Aperti tutti i giorni, solo a cena. Apertura prevista fine ottobre 2026.",
   openingNotice: "Apertura prevista fine ottobre 2026",
   address: {
     street: "Via Romagna, 8",
