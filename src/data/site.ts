@@ -7,7 +7,7 @@ export const site = {
   shortName: "MaRò",
   tagline: "Pizza e pollo allo spiedo a Palermo",
   description:
-    "MaRò Pizzeria - Pizza e pollo allo spiedo in via Romagna 8 a Palermo. Aperti tutti i giorni a pranzo e cena. Apertura prevista fine ottobre 2026.",
+    "MaRò Pizzeria - Pizza e pollo allo spiedo in via Romagna 8 a Palermo. Aperti tutti i giorni, solo a cena. Apertura prevista fine ottobre 2026.",
   openingNotice: "Apertura prevista fine ottobre 2026",
   address: {
     street: "Via Romagna, 8",
@@ -21,7 +21,7 @@ export const site = {
   whatsapp: "",         // TODO: solo cifre con prefisso, es. 393281234567
   email: "",            // TODO
   hours: [
-    { days: "Tutti i giorni", time: "Pranzo e cena" },
+    { days: "Tutti i giorni", time: "Cena" },
   ], // TODO: fasce orarie precise quando disponibili
   social: {
     instagram: "", // TODO: pagina non ancora creata

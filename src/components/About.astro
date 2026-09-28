@@ -3,9 +3,9 @@ import { Flame, Drumstick, ShoppingBag } from "lucide-astro";
 import { site } from "../data/site";
 
 const facts = [
-  { icon: Flame, title: "Pizza dal forno", text: "Impasti curati e cottura tradizionale." },
-  { icon: Drumstick, title: "Pollo allo spiedo", text: "Cotto lentamente, croccante e succoso." },
-  { icon: ShoppingBag, title: "Al tavolo o da asporto", text: "Tutti i giorni, a pranzo e a cena." },
+  { icon: Flame, title: "Pizza dal forno", text: "Impasto a lunga lievitazione, cotto nel forno a legna." },
+  { icon: Drumstick, title: "Pollo allo spiedo", text: "Cottura lenta: dorato e croccante fuori, morbido dentro." },
+  { icon: ShoppingBag, title: "Al tavolo o da asporto", text: "Aperti tutti i giorni, solo a cena." },
 ];
 ---
 
@@ -28,11 +28,11 @@ const facts = [
       <p class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3">Chi siamo</p>
       <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Pizza e pollo, fatti con il cuore</h2>
       <p class="mt-6 text-lg text-white/75 leading-relaxed">
-        <!-- TODO: storia reale del nuovo gestore -->
-        {site.shortName} nasce in via Romagna con una nuova gestione e un locale completamente rinnovato: pizze dal forno e pollo allo spiedo, preparati ogni giorno con ingredienti selezionati.
+        <!-- TODO: verificare/perfezionare con il racconto reale del nuovo gestore -->
+        In via Romagna nasce {site.shortName}: una nuova gestione, un locale rinnovato da cima a fondo e la stessa idea di sempre, fare le cose per bene. La pizza esce da un impasto a lunga lievitazione e da un forno a legna sempre acceso; il pollo gira lento sullo spiedo fino a diventare dorato e croccante fuori, tenero dentro.
       </p>
       <p class="mt-4 text-lg text-white/75 leading-relaxed">
-        Da mangiare qui o da portare a casa, per un pranzo o una cena semplice e genuina.
+        Un menu semplice da gustare al tavolo o portare a casa: aperti tutti i giorni, solo a cena.
       </p>
     </div>
 
